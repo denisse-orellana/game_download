@@ -1,0 +1,43 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Components</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Image</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @components.each do |component| %>
+        <tr>
+          <td><%= component.name %></td>
+          <td><%= component.typecomp %></td>
+          <td>
+            <% component.images.each do |c| %>
+              <ul>
+                <li>
+                  <%= image_tag c.variant(resize: "100x100", colorspace: "gray") %>
+                  <%= link_to 'See better', rails_blob_path(c, disposition: "preview") %>
+                  <%= link_to 'Download', rails_blob_path(c, disposition: "attachment") %>
+                </li>
+              </ul>
+            <% end %>
+          </td>
+          <td><%= link_to 'Show', component %></td>
+          <td><%= link_to 'Edit', edit_component_path(component) %></td>
+          <td><%= link_to 'Destroy', component, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Component', new_component_path %>
+</div>

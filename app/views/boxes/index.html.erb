@@ -1,0 +1,34 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Boxes</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Content</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @boxes.each do |box| %>
+        <tr>
+          <td><%= image_tag box.image.variant(resize: "100x100", colorspace: "gray") %></td>
+          <td><%= link_to 'See better', rails_blob_path(box.image, disposition: "preview") %></td>
+          <td><%= link_to 'Download', rails_blob_path(box.image, disposition: "attachment") %></td>
+          <td><%= box.content %></td>
+          <td><%= link_to 'Show', box %></td>
+          <td><%= link_to 'Edit', edit_box_path(box) %></td>
+          <td><%= link_to 'Destroy', box, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Box', new_box_path %>
+
+</div>
