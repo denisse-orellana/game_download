@@ -1,6 +1,6 @@
 # Board Games
 
-This project involves the development of a storage database system, which includes images and documents, about board games. The storage implementation is made through the Amazon Web Services (AWS).
+This project involves the development of a storage database system about board games which includes images and documents. The storage implementation is made through the Amazon Web Services (AWS).
 
 ![game_project](/app/assets/images/game_project.png)
 
