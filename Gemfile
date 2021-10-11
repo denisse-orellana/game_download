@@ -72,3 +72,5 @@ gem "aws-sdk-s3", "~> 1.103"
 gem "figaro", "~> 1.2"
 # To make it easier to handle nested forms. Read more: https://github.com/nathanvda/cocoon
 gem "cocoon", "~> 1.2"
+# ActiveStorage blob validator. Read more: https://github.com/aki77/activestorage-validator
+gem "activestorage-validator", "~> 0.1.5"
