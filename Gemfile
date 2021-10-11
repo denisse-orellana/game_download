@@ -76,3 +76,5 @@ gem "cocoon", "~> 1.2"
 gem "activestorage-validator", "~> 0.1.5"
 
 gem "rails-erd", "~> 1.6"
+# To upload to Heroku
+gem 'sqlite3', group: :development
