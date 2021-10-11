@@ -11,13 +11,13 @@ This project involves the development of a storage database system, which includ
 
 ## Ruby & Rails gems
 
-* gem 'image_processing', '~> 1.12'. More information available at: https://github.com/janko/image_processing
-* gem 'bootstrap', '~> 4.3.1'. More information available at: http://getbootstrap.com
-* gem 'jquery-rails'. More information available at: https://github.com/rails/jquery-rails
-* gem "aws-sdk-s3", "~> 1.103". More information available at: https://github.com/aws/aws-sdk-ruby
-* gem "figaro", "~> 1.2". More information available at: https://github.com/laserlemon/figaro
-* gem "cocoon", "~> 1.2". More information available at: https://github.com/nathanvda/cocoon
-* gem "activestorage-validator", "~> 0.1.5". More information available at: https://github.com/aki77/activestorage-validator
+* gem 'image_processing', '~> 1.12'. More information: [Image-processing](https://github.com/janko/image_processing)
+* gem 'bootstrap', '~> 4.3.1'. More information: [Bootstrap](http://getbootstrap.com)
+* gem 'jquery-rails'. More information: [Jquery-rails](https://github.com/rails/jquery-rails)
+* gem "aws-sdk-s3", "~> 1.103". More information: [AWS SDK para Ruby](https://aws.amazon.com/es/sdk-for-ruby/)
+* gem "figaro", "~> 1.2". More information: [Figaro](https://github.com/laserlemon/figaro)
+* gem "cocoon", "~> 1.2". More information: [Cocoon](https://github.com/nathanvda/cocoon)
+* gem "activestorage-validator", "~> 0.1.5". More information: [ActiveStorage Validator](https://github.com/aki77/activestorage-validator)
 
 ## Diagram model
 
@@ -25,7 +25,7 @@ The final Game domain model is summarised in the next flowchart:
 
 ![diagram](/app/assets/images/game_domain_model.png)
 
-## Defining the model structure
+## Defining the model structures
 
 ![diagram](/app/assets/images/game_diagram.png)
 
@@ -34,7 +34,7 @@ bundle add figaro
 bundle exec figaro install
 ```
 
-To checked the location of the files on the rails console, search for the service url:
+To checked the location of the files on the rails console, search for the service url as it follows:
 
 ```console
 Game.last.box.image.service_url
