@@ -1,32 +1,42 @@
-# README
+# Board Games
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project involves the development of a storage database system, which includes images and documents, about board games. The storage implementation is made through the Amazon Web Services (AWS).
 
-Things you may want to cover:
+![diagram](/app/assets/images/game_project.png)
 
-* Ruby version
+## Ruby & Rails version
 
-* System dependencies
+* ruby '2.6.1'
+* gem 'rails', '~> 5.2.6'
 
-* Configuration
+## Ruby & Rails gems
 
-* Database creation
+* gem 'image_processing', '~> 1.12'. More information available at: https://github.com/janko/image_processing
+* gem 'bootstrap', '~> 4.3.1'. More information available at: http://getbootstrap.com
+* gem 'jquery-rails'. More information available at: https://github.com/rails/jquery-rails
+* gem "aws-sdk-s3", "~> 1.103". More information available at: https://github.com/aws/aws-sdk-ruby
+* gem "figaro", "~> 1.2". More information available at: https://github.com/laserlemon/figaro
+* gem "cocoon", "~> 1.2". More information available at: https://github.com/nathanvda/cocoon
+* gem "activestorage-validator", "~> 0.1.5". More information available at: https://github.com/aki77/activestorage-validator
 
-* Database initialization
+## Diagram model
 
-* How to run the test suite
+The final Game domain model is summarised in the next flowchart:
 
-* Services (job queues, cache servers, search engines, etc.)
+![diagram](/app/assets/images/game_domain_model.png)
 
-* Deployment instructions
+## Defining the model structure
 
-* ...
+![diagram](/app/assets/images/game_diagram.png)
 
-
+```console
 bundle add figaro
 bundle exec figaro install
+```
 
+To checked the location of the files on the rails console, search for the service url:
+
+```console
 Game.last.box.image.service_url
 "https://g46game.s3.amazonaws.com/
 
@@ -35,3 +45,4 @@ https://g46game.s3.amazonaws.com/
 
 Game.last.components.last.images.last.service_url
 "https://g46game.s3.amazonaws.com/
+```

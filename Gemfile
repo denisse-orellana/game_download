@@ -74,3 +74,5 @@ gem "figaro", "~> 1.2"
 gem "cocoon", "~> 1.2"
 # ActiveStorage blob validator. Read more: https://github.com/aki77/activestorage-validator
 gem "activestorage-validator", "~> 0.1.5"
+
+gem "rails-erd", "~> 1.6"
