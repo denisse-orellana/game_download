@@ -1,4 +1,4 @@
 class Box < ApplicationRecord
-    has_one :game
+    belongs_to :game
     has_one_attached :image
 end

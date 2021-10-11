@@ -22,7 +22,7 @@
             <% component.images.each do |c| %>
               <ul>
                 <li>
-                  <%= image_tag c.variant(resize: "100x100", colorspace: "gray") %>
+                  <%# image_tag c.variant(resize: "100x100", colorspace: "gray") %>
                   <%= link_to 'See better', rails_blob_path(c, disposition: "preview") %>
                   <%= link_to 'Download', rails_blob_path(c, disposition: "attachment") %>
                 </li>

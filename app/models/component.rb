@@ -1,5 +1,5 @@
 class Component < ApplicationRecord
-    has_one :game
+    belongs_to :game
     has_many_attached :images
 
     enum typecomp: %w[piece part]

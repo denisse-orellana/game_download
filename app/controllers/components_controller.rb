@@ -71,6 +71,6 @@ class ComponentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def component_params
-      params.require(:component).permit(:name, :typecomp, images: [])
+      params.require(:component).permit(:name, :typecomp, :game_id, images: [])
     end
 end

@@ -64,6 +64,6 @@ class RulesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def rule_params
-      params.require(:rule).permit(:name, :content, :document)
+      params.require(:rule).permit(:name, :content, :game_id, :document)
     end
 end

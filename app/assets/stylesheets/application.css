@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+ #main {
+    background-color: #F5EEE6; 
+}
+
+.card-header {
+    background-color: #BCCABB;
+}
+
+.card-footer {
+    background-color: #E5E5E5;
+}
+
+i {
+    color: #383838;
+}

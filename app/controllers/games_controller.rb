@@ -1,15 +1,11 @@
 class GamesController < ApplicationController
   before_action :set_game, only: %i[ show edit update destroy ]
   # Calling set_select for the enum of typecomp
-  before_action :set_select
+  before_action :set_select, only: %i[ new edit create update ]
 
   # GET /games or /games.json
   def index
     @games = Game.all
-    @game = Game.new
-    @box = Box.new
-    @rule = Rule.new
-    @component = Component.new
   end
 
   # GET /games/1 or /games/1.json
@@ -19,10 +15,16 @@ class GamesController < ApplicationController
   # GET /games/new
   def new
     @game = Game.new
+    @box = Box.new
+    @rule = Rule.new
+    @component = Component.new
   end
 
   # GET /games/1/edit
   def edit
+    @box = Box.new
+    @rule = Rule.new
+    @component = Component.new
   end
 
   # POST /games or /games.json
@@ -75,6 +77,6 @@ class GamesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def game_params
-      params.require(:game).permit(:title, :description, :rule_id, :component_id, :box_id, rules_attributes: [:id, :name, :content, :document, :_destroy], components_attributes: [:id, :name, :typecomp, images: [], :_destroy], boxes_attributes: [:id, :content, :image, :_destroy])
+      params.require(:game).permit(:title, :description, { rule_attributes: [:id, :name, :content, :document, :_destroy] }, { components_attributes: [:id, :name, :typecomp, {images: []}, :_destroy] }, { box_attributes: [:id, :content, :image, :_destroy] } )
     end
 end

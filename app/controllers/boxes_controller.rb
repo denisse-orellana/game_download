@@ -64,6 +64,6 @@ class BoxesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def box_params
-      params.require(:box).permit(:content, :image)
+      params.require(:box).permit(:content, :game_id, :image)
     end
 end

@@ -21,19 +21,34 @@
     <%= form.text_field :description, class: "form-control" %>
   </div>
 
-  <div class="form-group">
-    <%= form.label :rule_id %>
-    <%= form.text_field :rule_id, class: "form-control" %>
+  <div class="field">
+    <%= form.fields_for :box do |ff| %>
+      <%= render 'box_fields', f: ff %>
+    <% end %>
   </div>
 
-  <div class="form-group">
-    <%= form.label :component_id %>
-    <%= form.text_field :component_id, class: "form-control" %>
+  <div class="field">
+    <%= link_to_add_association 'Add box', form, :box, force_non_association_create: true %>
   </div>
 
-  <div class="form-group">
-    <%= form.label :box_id %>
-    <%= form.text_field :box_id, class: "form-control" %>
+  <div class="field">
+    <%= form.fields_for :rule do |ff| %>
+      <%= render 'rule_fields', f: ff %>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= link_to_add_association 'Add rule', form, :rule, force_non_association_create: true %>
+  </div>
+
+  <div class="field">
+    <%= form.fields_for :components do |ff| %>
+      <%= render 'component_fields', f: ff %>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= link_to_add_association 'Add component', form, :components %>
   </div>
 
   <div class="actions">

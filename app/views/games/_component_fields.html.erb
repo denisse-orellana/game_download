@@ -1,14 +1,14 @@
 <div class="form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: "form-control" %>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
 </div>
 
 <div class="form-group">
-    <%= form.label :typecomp %>
-    <%= form.select :typecomp, @typecomps, class: "form-control"  %>
+    <%= f.label :typecomp %>
+    <%= f.select :typecomp, @typecomps, class: "form-control"  %>
 </div>
 
 <div class="form-group">
-    <%= form.label :images %>
-    <%= form.file_field :images, multiple: true, class: "form-control"  %>
+    <%= f.label :images %>
+    <%= f.file_field :images, multiple: true, class: "form-control"  %>
 </div>

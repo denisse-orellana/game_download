@@ -27,5 +27,11 @@ Things you may want to cover:
 bundle add figaro
 bundle exec figaro install
 
-Box.last.image.service_url
-https://g46game.s3.amazonaws.com/5Rw
+Game.last.box.image.service_url
+"https://g46game.s3.amazonaws.com/
+
+Game.last.rule.document.service_url
+https://g46game.s3.amazonaws.com/
+
+Game.last.components.last.images.last.service_url
+"https://g46game.s3.amazonaws.com/

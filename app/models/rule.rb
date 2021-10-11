@@ -1,4 +1,4 @@
 class Rule < ApplicationRecord
-    has_one :game
+    belongs_to :game
     has_one_attached :document
 end

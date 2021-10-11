@@ -70,5 +70,5 @@ gem 'jquery-rails'
 gem "aws-sdk-s3", "~> 1.103"
 # To make it easy to securely configure Rails applications. Read more: https://github.com/laserlemon/figaro
 gem "figaro", "~> 1.2"
-
+# To make it easier to handle nested forms. Read more: https://github.com/nathanvda/cocoon
 gem "cocoon", "~> 1.2"
