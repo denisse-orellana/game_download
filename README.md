@@ -2,7 +2,7 @@
 
 This project involves the development of a storage database system, which includes images and documents, about board games. The storage implementation is made through the Amazon Web Services (AWS).
 
-![diagram](/app/assets/images/game_project.png)
+![game_project](/app/assets/images/game_project.png)
 
 ## Ruby & Rails version
 
@@ -23,11 +23,11 @@ This project involves the development of a storage database system, which includ
 
 The final Game domain model is summarised in the next flowchart:
 
-![diagram](/app/assets/images/game_domain_model.png)
+![game_domain_model](/app/assets/images/game_domain_model.png)
 
 ## Defining the model structures
 
-![diagram](/app/assets/images/game_diagram.png)
+![game_diagram](/app/assets/images/game_diagram.png)
 
 ```console
 bundle add figaro
