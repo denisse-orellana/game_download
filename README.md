@@ -2,7 +2,7 @@
 
 This project involves the development of a storage database system, which includes images and documents, about board games. The storage implementation is made through the Amazon Web Services (AWS).
 
-![game_project](/app/assets/images/game_project.png)
+![game_project](/game_project.png)
 
 ## Ruby & Rails version
 
