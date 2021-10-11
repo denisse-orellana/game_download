@@ -46,3 +46,5 @@ https://g46game.s3.amazonaws.com/
 Game.last.components.last.images.last.service_url
 "https://g46game.s3.amazonaws.com/
 ```
+
+The project was uploaded to Heroku. You can see it here: [GamesApp](https://young-river-73372.herokuapp.com/games)
