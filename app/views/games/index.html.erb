@@ -21,7 +21,7 @@
         <h1 class="card-header"><%= game.title %></h1>
         <div class="card-body">
           <div class="container text-right">
-            <%= link_to game do %><i class="far fa-eye fa-2x"></i><% end %>
+            <%# link_to game do %><i class="far fa-eye fa-2x"></i><% end %>
             <%= link_to edit_game_path(game) do %><i class="far fa-edit fa-2x"></i><% end %>
             <%= link_to game, method: :delete, data: { confirm: 'Are you sure?' } do %><i class="far fa-trash-alt fa-2x"></i><% end %></td>  
           </div>
