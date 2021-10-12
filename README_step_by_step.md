@@ -136,6 +136,102 @@ class GamesController < ApplicationController
     end
 ```
 
+The partial forms are created to add the new attributes of rule, box and component:
+
+```ruby
+# _box_fields.html.erb
+
+<div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+</div>
+
+<div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_field :content, class: "form-control"  %>
+</div>
+
+<div class="form-group">
+    <%= f.label :document %>
+    <%= f.file_field :document, class: "form-control"  %>
+</div
+```
+
+```ruby
+# _box_fields.html.erb
+
+<div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_field :content, class: "form-control" %>
+</div>
+
+<div class="form-group">
+    <%= f.label :image %>
+    <%= f.file_field :image, class: "form-control" %>
+</div>
+```
+
+```ruby
+# _component_fields.html.erb
+
+<div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+</div>
+
+<div class="form-group">
+    <%= f.label :typecomp %>
+    <%= f.select :typecomp, @typecomps, class: "form-control"  %>
+</div>
+
+<div class="form-group">
+    <%= f.label :images %>
+    <%= f.file_field :images, multiple: true, class: "form-control"  %>
+</div>
+
+```
+
+Next in the form of Game, the non association for one to one nested attributes is added as:
+
+```ruby
+# games/_form.html.erb
+
+<div class="form-group">
+  <%= form.label :description %>
+  <%= form.text_field :description, class: "form-control" %>
+</div>
+
+<div class="field">
+  <%= form.fields_for :box do |ff| %>
+    <%= render 'box_fields', f: ff %>
+  <% end %>
+</div>
+
+<div class="field">
+  <%= link_to_add_association 'Add box', form, :box, force_non_association_create: true %>
+</div>
+
+<div class="field">
+  <%= form.fields_for :rule do |ff| %>
+    <%= render 'rule_fields', f: ff %>
+  <% end %>
+</div>
+
+<div class="field">
+  <%= link_to_add_association 'Add rule', form, :rule, force_non_association_create: true %>
+</div>
+
+<div class="field">
+  <%= form.fields_for :components do |ff| %>
+    <%= render 'component_fields', f: ff %>
+  <% end %>
+</div>
+
+<div class="field">
+  <%= link_to_add_association 'Add component', form, :components %>
+</div>
+```
+
 Then, the attributes can be called from the Game index.
 
 ### Active Storage Validations 
@@ -246,4 +342,22 @@ git log
 git push heroku main
 
 heroku run rails db:migrate
+```
+
+#### Figaro configuration in Heroku
+
+First unset the variables:
+
+```console
+heroku config:unset aws_access_key_id
+heroku config:unset aws_secret_access_key
+heroku config:unset aws_region
+heroku config:unset aws_bucket
+```
+
+Then, run this commands in the terminal:
+```console
+heroku buildpacks:add -i 1 https://github.com/heroku/heroku-buildpack-activestorage-preview
+heroku config:set google_analytics_key=UA-35722661-5
+figaro heroku:set -e development
 ```
