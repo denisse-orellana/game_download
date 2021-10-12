@@ -139,7 +139,7 @@ class GamesController < ApplicationController
 The partial forms are created to add the new attributes of rule, box and component:
 
 ```ruby
-# _box_fields.html.erb
+# _rule_fields.html.erb
 
 <div class="form-group">
     <%= f.label :name %>
@@ -191,7 +191,7 @@ The partial forms are created to add the new attributes of rule, box and compone
 
 ```
 
-Next in the form of Game, the non association for one to one nested attributes is added as:
+Next in the form of Game, the non association for one to one association with nested attributes is added as:
 
 ```ruby
 # games/_form.html.erb
