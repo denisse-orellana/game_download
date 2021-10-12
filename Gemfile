@@ -72,7 +72,7 @@ gem "figaro", "~> 1.2"
 gem "cocoon", "~> 1.2"
 # ActiveStorage blob validator. Read more: https://github.com/aki77/activestorage-validator
 gem "activestorage-validator", "~> 0.1.5"
-
+# Allows you to easily generate a diagram based on your application's Active Record models. Read more: https://github.com/voormedia/rails-erd
 gem "rails-erd", "~> 1.6"
 # To upload to Heroku
 gem 'sqlite3', group: :development
