@@ -191,6 +191,19 @@ amazon:
   bucket: <%= Figaro.env.aws_bucket %>
 ```
 
+The location of the files can be checked by searching for the service url on the rails console just as:
+
+```console
+Game.last.box.image.service_url
+"https://g46game.s3.amazonaws.com/..."
+
+Game.last.rule.document.service_url
+https://g46game.s3.amazonaws.com/..."
+
+Game.last.components.last.images.last.service_url
+"https://g46game.s3.amazonaws.com/..."
+```
+
 ### Heroku deployment
 
 Gems added to the Gemfile:
@@ -214,7 +227,7 @@ git add .
 git commit -m "add: initial state"
 git log
 
-git push heroku master
+git push heroku main
 
 heroku run rails db:migrate
 ```
