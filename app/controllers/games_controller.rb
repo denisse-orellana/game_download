@@ -18,6 +18,9 @@ class GamesController < ApplicationController
     @box = Box.new
     @rule = Rule.new
     @component = Component.new
+    @game.build_box
+    @game.build_rule
+    @game.components.build
   end
 
   # GET /games/1/edit
@@ -25,6 +28,9 @@ class GamesController < ApplicationController
     @box = Box.new
     @rule = Rule.new
     @component = Component.new
+    @game.build_box
+    @game.build_rule
+    @game.components.build
   end
 
   # POST /games or /games.json

@@ -1,6 +1,6 @@
 # Board Games
 
-This project involves the development of a storage database system about board games which includes images and documents. The storage implementation is made through the Active Storage Gem the Amazon Simple Storage Service (Amazon S3).
+This project involves the development of a storage database system about board games which includes images and documents. The storage implementation is made through the Active Storage and the Amazon Simple Storage Service (Amazon S3).
 
 ![game_project](/app/assets/images/game_project.png)
 
@@ -91,18 +91,18 @@ Box.new.game
 
 First, the gem for AWS SDK is added:
 
-```ruby
-gem "aws-sdk-s3"
+```console
+bundle add aws-sdk-s3
 ```
 
-The creation of a Bucket and a User is needed to the implementation of the service. Next, the gem to secure the configuration on Rails applications is added and install:
+The creation of a Bucket and a User is needed to the implementation of the service. Next, the gem to secure the configuration on Rails applications is added and installed:
 
 ```console
 bundle add figaro
 bundle exec figaro install
 ```
 
-After the configuration of the keys, the location of the files on the rails console can be checked by searching for the service url, just as:
+After the configuration of the keys, the location of the files can be checked by searching for the service url on the rails console just as:
 
 ```console
 Game.last.box.image.service_url
@@ -117,7 +117,6 @@ Game.last.components.last.images.last.service_url
 
 ## Heroku deployment
 
-The project was uploaded to Heroku. You can see it here: [GamesApp](https://young-river-73372.herokuapp.com/games)
+The project was uploaded to Heroku. You can see it here: [BoardGames](https://young-river-73372.herokuapp.com/games)
 
-
-*For more information of the project, the step_by_step readme is available.*
+*For more details of the project, the step_by_step readme is available.*
