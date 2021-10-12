@@ -121,4 +121,4 @@ The project was uploaded to Heroku. You can see it here: [BoardGames](https://yo
 
 **Note**: "The Heroku filesystem is ephemeral - that means that any changes to the filesystem whilst the dyno is running only last until that dyno is shut down or restarted. The filesystem on Heroku is not suitable for persistent storage of data". [More information](https://help.heroku.com/K1PPS2WM/why-are-my-file-uploads-missing-deleted)
 
-*For more details of the project, the step_by_step readme is available.*
+*For more details of the project the step_by_step readme is available.*
