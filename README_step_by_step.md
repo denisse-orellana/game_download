@@ -61,6 +61,22 @@ Component.new.game
 Box.new.game
 ```
 
+For the enum implementation in the model and controller:
+
+```ruby
+class Component < ApplicationRecord
+  enum typecomp: %w[piece part]
+end
+
+class GamesController < ApplicationController
+  before_action :set_select, only: %i[ new edit create update ]
+
+  def set_select
+    @typecomps = Component.typecomps.keys.to_a
+  end
+end
+```
+
 ### Permit images and documents
 
 To permit the attached files the controller, first this Rails tool and gem are installed:
