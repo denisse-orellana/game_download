@@ -4,6 +4,14 @@ This project involves the development of a storage database system about board g
 
 ![game_project](/app/assets/images/game_project.png)
 
+- [Board Games](#board-games)
+  * [Ruby & Rails version](#ruby---rails-version)
+  * [Ruby & Rails gems](#ruby---rails-gems)
+  * [Diagram model](#diagram-model)
+  * [Defining the model structures](#defining-the-model-structures)
+  * [Amazon Simple Storage Service (Amazon S3)](#amazon-simple-storage-service--amazon-s3-)
+  * [Heroku deployment](#heroku-deployment)
+
 ## Ruby & Rails version
 
 * ruby '2.6.1'
@@ -94,7 +102,7 @@ bundle add figaro
 bundle exec figaro install
 ```
 
-After the configuration of the keys, the location of the files on the rails console can be search for the service url, just as:
+After the configuration of the keys, the location of the files on the rails console can be checked by searching for the service url, just as:
 
 ```console
 Game.last.box.image.service_url
@@ -111,4 +119,5 @@ Game.last.components.last.images.last.service_url
 
 The project was uploaded to Heroku. You can see it here: [GamesApp](https://young-river-73372.herokuapp.com/games)
 
-For more information of the project, the step_by_step readme is available.
+
+*For more information of the project, the step_by_step readme is available.*
