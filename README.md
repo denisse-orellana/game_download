@@ -2,8 +2,6 @@
 
 This project involves the development of a storage database system about board games which includes images and documents. The storage implementation is made through the Active Storage and the Amazon Simple Storage Service (Amazon S3).
 
-![game_project](/app/assets/images/game_project.png)
-
 - [Board Games](#board-games)
   * [Ruby & Rails version](#ruby---rails-version)
   * [Ruby & Rails gems](#ruby---rails-gems)
@@ -114,11 +112,3 @@ https://g46game.s3.amazonaws.com/..."
 Game.last.components.last.images.last.service_url
 "https://g46game.s3.amazonaws.com/..."
 ```
-
-## Heroku deployment
-
-The project was uploaded to Heroku. You can see it here: [BoardGames](https://young-river-73372.herokuapp.com/games)
-
-**Note**: "The Heroku filesystem is ephemeral - that means that any changes to the filesystem whilst the dyno is running only last until that dyno is shut down or restarted. The filesystem on Heroku is not suitable for persistent storage of data". [More information](https://help.heroku.com/K1PPS2WM/why-are-my-file-uploads-missing-deleted)
-
-*For more details of the project the step_by_step readme is available.*
